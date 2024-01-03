@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href='index.html'>SLIME DASH</a>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='#'>Endless</a></li>
+                    <li><a href='#'>Multiplayer</a></li>
+                    <li><a href='#'>Setting</a></li>
+                    <li><button class='shopbtn' onclick="document.getElementById('shop-form').style.display='block'">Shop</button></li>
+                </ul>
+            </nav>
+        </div>
+        <div id='shop-form' class='shop-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button' onclick='character()' class='toggle-btn'>Character</button>
+                    <button type='button' onclick='background()' class='toggle-btn'>Background</button>
+                    <button type='button' onclick='accessories()' class='toggle-btn'>Accessories</button>
+                </div>
+                <div class="preview_box" id="preview">
+                    
+                </div>
+                <form id='character' class='input-group-character'>
+                    <div class="bg2-container"></div>
+                    <div class="bg3-container"></div>
+                    <div class="bg4-container"></div>
+                    <div class="bg5-container"></div>
+                    <div class="another-bg2-container"></div>
+                    <div class="another-bg3-container"></div>
+                    <div class="another-bg4-container"></div>
+                    <div class="another-bg5-container"></div>
+                </form>
+                <form id='background' class='input-group-background'>
+                    <div class="bg7-container"></div>
+                    <div class="bg8-container"></div>
+                    <div class="bg9-container"></div>
+                    <div class="bg10-container"></div>
+                    <div class="another-bg7-container"></div>
+                    <div class="another-bg8-container"></div>
+                    <div class="another-bg9-container"></div>
+                    <div class="another-bg10-container"></div>
+                </form>
+                <form id='accessories' class='input-group-accessories'>
+                    <div class="bg12-container"></div>
+                    <div class="bg13-container"></div>
+                    <div class="bg14-container"></div>
+                    <div class="bg15-container"></div>
+                    <div class="another-bg12-container"></div>
+                    <div class="another-bg13-container"></div>
+                    <div class="another-bg14-container"></div>
+                    <div class="another-bg15-container"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var w = document.getElementById('character');
+        var x = document.getElementById('background');
+        var y = document.getElementById('accessories');
+        var z = document.getElementById('btn');
+
+        function character() {
+            w.style.transform = 'translateX(0%)';
+            x.style.transform = 'translateX(-50%)';
+            y.style.transform = 'translateX(-100%)';
+            z.style.left = '0px';
+
+            // Show character containers (bg1 to bg5)
+            var characterContainers = document.querySelectorAll('.bg1-container, .bg2-container, .bg3-container, .bg4-container, .bg5-container, .another-bg1-container, .another-bg2-container, .another-bg3-container, .another-bg4-container, .another-bg5-container');
+            characterContainers.forEach(function(container) {
+                container.style.display = 'block';
+            });
+
+            // Hide background and accessories containers
+            var bgContainers = document.querySelectorAll('.bg6-container, .bg7-container, .bg8-container, .bg9-container, .bg10-container, .another-bg6-container, .another-bg7-container, .another-bg8-container, .another-bg9-container, .another-bg10-container');
+            var accessoriesContainers = document.querySelectorAll('.bg11-container, .bg12-container, .bg13-container, .bg14-container, .bg15-container, .another-bg11-container, .another-bg12-container, .another-bg13-container, .another-bg14-container, .another-bg15-container');
+            bgContainers.forEach(function(container) {
+                container.style.display = 'none';
+            });
+            accessoriesContainers.forEach(function(container) {
+                container.style.display = 'none';
+            });
+        }
+
+        function background() {
+            x.style.transform = 'translateX(0%)';
+            w.style.transform = 'translateX(50%)';
+            y.style.transform = 'translateX(-100%)';
+            z.style.left = '200px';
+
+            // Show background containers
+            var bgContainers = document.querySelectorAll('.bg6-container, .bg7-container, .bg8-container, .bg9-container, .bg10-container, .another-bg6-container, .another-bg7-container, .another-bg8-container, .another-bg9-container, .another-bg10-container');
+            bgContainers.forEach(function(container) {
+                container.style.display = 'block';
+            });
+
+            // Hide character and accessories containers
+            var characterContainers = document.querySelectorAll('.bg1-container, .bg2-container, .bg3-container, .bg4-container, .bg5-container, .another-bg1-container, .another-bg2-container, .another-bg3-container, .another-bg4-container, .another-bg5-container');
+            var accessoriesContainers = document.querySelectorAll('.bg11-container, .bg12-container, .bg13-container, .bg14-container, .bg15-container, .another-bg11-container, .another-bg12-container, .another-bg13-container, .another-bg14-container, .another-bg15-container');
+            characterContainers.forEach(function(container) {
+                container.style.display = 'none';
+            });
+            accessoriesContainers.forEach(function(container) {
+                container.style.display = 'none';
+            });
+        }
+
+        function accessories() {
+            y.style.transform = 'translateX(0%)';
+            w.style.transform = 'translateX(50%)';
+            x.style.transform = 'translateX(100%)';
+            z.style.left = '400px';
+
+            // Show accessories containers
+            var accessoriesContainers = document.querySelectorAll('.bg11-container, .bg12-container, .bg13-container, .bg14-container, .bg15-container, .another-bg11-container, .another-bg12-container, .another-bg13-container, .another-bg14-container, .another-bg15-container');
+            accessoriesContainers.forEach(function(container) {
+                container.style.display = 'block';
+            });
+
+            // Hide character and background containers
+            var characterContainers = document.querySelectorAll('.bg1-container, .bg2-container, .bg3-container, .bg4-container, .bg5-container, .another-bg1-container, .another-bg2-container, .another-bg3-container, .another-bg4-container, .another-bg5-container');
+            var bgContainers = document.querySelectorAll('.bg6-container, .bg7-container, .bg8-container, .bg9-container, .bg10-container, .another-bg6-container, .another-bg7-container, .another-bg8-container, .another-bg9-container, .another-bg10-container');
+            characterContainers.forEach(function(container) {
+                container.style.display = 'none';
+            });
+            bgContainers.forEach(function(container) {
+                container.style.display = 'none';
+            });
+        }
+
+        var modal = document.getElementById('shop-form');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
