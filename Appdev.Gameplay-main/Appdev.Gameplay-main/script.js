@@ -118,11 +118,11 @@ function play(){
         if(pipe_seperation > 115){
             pipe_seperation = 10;
 
-            let pipe_posi = Math.floor(1000);
+            let pipe_posi = Math.floor(Math.random() * 43) + 8;
             let pipe_sprite_inv = document.createElement('div');
             pipe_sprite_inv.className = 'pipe_sprite';
             //top obstacles
-            pipe_sprite_inv.style.top = pipe_posi - 70 + 'vh';
+            // pipe_sprite_inv.style.top = pipe_posi - 70 + 'vh';
             pipe_sprite_inv.style.left = '100vw';
 
             document.body.appendChild(pipe_sprite_inv);
@@ -139,35 +139,35 @@ function play(){
     }
     requestAnimationFrame(create_pipe);
 
-    let coin_seperation = 0;
+    // let coin_seperation = 0;
 
-    let coin_gap = 40;
+    // let coin_gap = 40;
 
-    function create_coin(){
-        if(game_state != 'Play') return;
+    // function create_coin(){
+    //     if(game_state != 'Play') return;
 
-        if(coin_seperation > 115){
-            coin_seperation = 0;
+    //     if(coin_seperation > 115){
+    //         coin_seperation = 0;
 
-            let coin_posi = Math.floor(Math.random() * 43) + 8;
-            let coin_sprite_inv = document.createElement('div');
-            coin_sprite_inv.className = 'credit_points';
-            coin_sprite_inv.style.top = coin_posi - 70 + 'vh';
-            coin_sprite_inv.style.left = '100vw';
+    //         let coin_posi = Math.floor(Math.random() * 43) + 8;
+    //         let coin_sprite_inv = document.createElement('div');
+    //         coin_sprite_inv.className = 'credit_points';
+    //         coin_sprite_inv.style.top = coin_posi - 70 + 'vh';
+    //         coin_sprite_inv.style.left = '100vw';
 
-            document.body.appendChild(coin_sprite_inv);
-            let credit_points = document.createElement('div');
-            credit_points.className = 'credit_points';
-            credit_points.style.top = coin_posi + coin_gap + 'vh';
-            credit_points.style.left = '100vw';
-            credit_points.increase_score = '1';
+    //         document.body.appendChild(coin_sprite_inv);
+    //         let credit_points = document.createElement('div');
+    //         credit_points.className = 'credit_points';
+    //         credit_points.style.top = coin_posi + coin_gap + 'vh';
+    //         credit_points.style.left = '100vw';
+    //         credit_points.increase_score = '1';
 
-            document.body.appendChild(credit_points);
-        }
-        coin_seperation++;
-        requestAnimationFrame(create_coin);
-    }
-    requestAnimationFrame(create_coin);
+    //         document.body.appendChild(credit_points);
+    //     }
+    //     coin_seperation++;
+    //     requestAnimationFrame(create_coin);
+    // }
+    // requestAnimationFrame(create_coin);
 
     /*class coins{
         constructor(){

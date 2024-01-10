@@ -7,13 +7,13 @@
 .background {
 	height: 100vh;
 	width: 100vw;
-	background: url('images/background-img.png') no-repeat center center fixed;
+	background: url('images/bgMain.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-.overlay1{
+/* .overlay1{
 	height: 100vh;
 	width: 100vw;
 	background: url('images/background2.png') no-repeat center center fixed;
@@ -21,7 +21,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
+} */
 .Endless{
 	border: 5px outset darkblue;
   	background-color: #7EB9EF;
