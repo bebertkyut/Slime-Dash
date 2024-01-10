@@ -1,0 +1,440 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.full-page
+{
+    height: 100%;
+	width: 100%;
+	background-image: url(final_bg.png);
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+nav
+{
+    flex: 1;
+    text-align: right;
+}
+nav ul 
+{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li
+{
+    display: inline-block;
+    margin-right: 70px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+}
+nav ul li button
+{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+nav ul li button:hover
+{
+    color: rgb(0, 0, 0);
+}
+nav ul li a:hover
+{
+    color: rgb(0, 0, 0);
+}
+a
+{
+    text-decoration: none;
+    color: palevioletred;
+    font-size: 28px;
+}
+#shop-form
+{
+    display: none;
+}
+.form-box
+{
+    width: 1800px;;
+	height: 808px;;
+	position:relative;
+	margin:2% auto;
+	background: #7EB9EF;
+	padding:10px;
+    border: #000;
+    overflow: hidden;
+}
+.button-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #0000001f;
+    border-radius: 30px;
+}
+
+.toggle-btn {
+    flex: 1; /* Each button will take an equal portion of space */
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: black;
+    position: relative;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 30px;
+    transition: .5s;
+}
+.input-group-character
+{
+	top: 120px;
+	position:absolute;
+	width:280px;
+	transition:.5s;    
+}
+.bg1-container,
+.bg2-container,
+.bg3-container,
+.bg4-container,
+.bg5-container{
+    position: absolute;
+    width: 290px;
+    height: 186px;
+    flex-shrink: 0;
+    top: 50px; 
+    border: 3px solid #000;
+    margin-left: 18%;
+}
+
+.bg1-container {
+    left: 20px;
+}
+
+.bg2-container {
+    left: 350px;
+}
+
+.bg3-container {
+    left: 670px;
+}
+
+.bg4-container {
+    left: 990px;
+}
+
+.bg5-container {
+    left: 1310px;
+}
+
+.another-bg1-container,
+.another-bg2-container,
+.another-bg3-container,
+.another-bg4-container,
+.another-bg5-container {
+    position: absolute;
+    width: 290px;
+    height: 186px;
+    flex-shrink: 0;
+    top: 350px; /* Adjusted the top value */
+    border: 3px solid #000;
+    margin-left: 18%;
+}
+
+.another-bg1-container {
+    left: 20px;
+}
+
+.another-bg2-container {
+    left: 350px;
+}
+
+.another-bg3-container {
+    left: 670px;
+}
+
+.another-bg4-container {
+    left: 990px;
+}
+
+.another-bg5-container {
+    left: 1310px;
+}
+.input-group-background
+{
+    top: 120px;
+	position:absolute;
+	width:280px;
+	transition:.5s;
+}
+.bg6-container,
+.bg7-container,
+.bg8-container,
+.bg9-container,
+.bg10-container{
+    position: absolute;
+    width: 290px;
+    height: 186px;
+    flex-shrink: 0;
+    top: 50px; 
+    border: 3px solid #000;
+    margin-left: 18%;
+}
+
+.bg6-container {
+    left: 20px;
+}
+
+.bg7-container {
+    left: 350px;
+}
+
+.bg8-container {
+    left: 670px;
+}
+
+.bg9-container {
+    left: 990px;
+}
+
+.bg10-container {
+    left: 1310px;
+}
+.another-bg6-container,
+.another-bg7-container,
+.another-bg8-container,
+.another-bg9-container,
+.another-bg10-container {
+    position: absolute;
+    width: 290px;
+    height: 186px;
+    flex-shrink: 0;
+    top: 350px; /* Adjusted the top value */
+    border: 3px solid #000;
+    margin-left: 18%;
+}
+
+.another-bg6-container {
+    left: 20px;
+}
+
+.another-bg7-container {
+    left: 350px;
+}
+
+.another-bg8-container {
+    left: 670px;
+}
+
+.another-bg9-container {
+    left: 990px;
+}
+
+.another-bg10-container {
+    left: 1310px;
+}
+.input-group-accessories
+{
+    top: 120px;
+	position:absolute;
+	width:280px;
+	transition:.5s;
+}
+.bg11-container,
+.bg12-container,
+.bg13-container,
+.bg14-container,
+.bg15-container{
+    position: absolute;
+    width: 290px;
+    height: 186px;
+    flex-shrink: 0;
+    top: 50px; 
+    border: 3px solid #000;
+    margin-left: 18%;
+}
+.preview_box{
+    position: absolute;
+    margin-top: 55px;
+    margin-left: 20px;
+    width: 350px;
+    height: 490px;
+    border-color: #000;
+    border-style: solid;
+}
+.bg11-container {
+    left: 20px;
+}
+
+.bg12-container {
+    left: 350px;
+}
+
+.bg13-container {
+    left: 670px;
+}
+
+.bg14-container {
+    left: 990px;
+}
+
+.bg15-container {
+    left: 1310px;
+}
+.another-bg11-container,
+.another-bg12-container,
+.another-bg13-container,
+.another-bg14-container,
+.another-bg15-container {
+    position: absolute;
+    width: 290px;
+    height: 186px;
+    flex-shrink: 0;
+    top: 350px; /* Adjusted the top value */
+    border: 3px solid #000;
+    margin-left: 18%;
+}
+
+.another-bg11-container {
+    left: 20px;
+}
+
+.another-bg12-container {
+    left: 350px;
+}
+
+.another-bg13-container {
+    left: 670px;
+}
+
+.another-bg14-container {
+    left: 990px;
+}
+
+.another-bg15-container {
+    left: 1310px;
+}
+.input-field
+{
+	width: 100%;
+	padding:10px 0;
+	margin:5px 0;
+	border-left:0;
+	border-top:0;
+	border-right:0;
+	border-bottom: 1px solid #999;
+	outline:none;
+	background: transparent;
+}
+span
+{
+	color:#777;
+	font-size:12px;
+	bottom:68px;
+	position:absolute;
+}
+.preview_box img {
+    position: absolute;
+    top: 50%;   
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%; /* Ensure the image doesn't exceed container width */
+    max-height: 100%; /* Ensure the image doesn't exceed container height */
+    width: 200px; /* Adjust the width as needed */
+    display: block; /* Ensure the image is a block element */
+    margin: 0 auto; /* Center the block element horizontally */
+}
+.bg2-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%; /* Ensure the image doesn't exceed container width */
+    width: 200px; /* Adjust the width as needed */
+    max-height: 100%; /* Ensure the image doesn't exceed container height */
+}
+.bg3-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%; /* Ensure the image doesn't exceed container width */
+    width: 200px; /* Adjust the width as needed */
+    max-height: 100%; /* Ensure the image doesn't exceed container height */
+}
+.bg4-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%; /* Ensure the image doesn't exceed container width */
+    width: 200px; /* Adjust the width as needed */
+    max-height: 100%; /* Ensure the image doesn't exceed container height */
+}
+.bg12-container,
+.bg13-container,
+.bg14-container,
+.bg15-container,
+.another-bg11-container,
+.another-bg12-container,
+.another-bg13-container,
+.another-bg14-container,
+.another-bg15-container {
+    display: none;
+}
+.bg12-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%; /* Ensure the image doesn't exceed container width */
+    width: 200px; /* Adjust the width as needed */
+    max-height: 100%; /* Ensure the image doesn't exceed container height */
+}
+.bg13-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%; /* Ensure the image doesn't exceed container width */
+    width: 200px; /* Adjust the width as needed */
+    max-height: 100%; /* Ensure the image doesn't exceed container height */
+}
+.bg14-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%; /* Ensure the image doesn't exceed container width */
+    width: 200px; /* Adjust the width as needed */
+    max-height: 100%; /* Ensure the image doesn't exceed container height */
+}
+

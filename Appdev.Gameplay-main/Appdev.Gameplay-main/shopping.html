@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+        <div id='shop-form' class='shop-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button' onclick='character()' class='toggle-btn'>Character</button>
+                    <button type='button' onclick='background()' class='toggle-btn'>Background</button>
+                    <button type='button' onclick='accessories()' class='toggle-btn'>Accessories</button>
+                </div>
+                <div class="preview_box" id="preview">
+                    <img src="spink.png.png" alt="pink slime">
+                </div>              
+                <form id='character' class='input-group-character'>
+                    <div class="bg2-container" onclick="changePreview('sgreen.png', 'green')">
+                        <img src="sgreen.png" alt="green slime">
+                    </div>
+                    <div class="bg3-container" onclick="changePreview('spurple.png', 'purple')">
+                        <img src="spurple.png" alt="purple slime">
+                    </div>
+                    <div class="bg4-container" onclick="changePreview('spink.png.png', 'pink')">
+                        <img src="spink.png.png" alt="yellow slime">
+                    </div>
+                    <div class="bg5-container"></div>
+                    <div class="another-bg2-container"></div>
+                    <div class="another-bg3-container"></div>
+                    <div class="another-bg4-container"></div>
+                    <div class="another-bg5-container"></div>
+                </form>
+                <form id='background' class='input-group-background'>
+                    <div class="bg7-container"></div>
+                    <div class="bg8-container"></div>
+                    <div class="bg9-container"></div>
+                    <div class="bg10-container"></div>
+                    <div class="another-bg7-container"></div>
+                    <div class="another-bg8-container"></div>
+                    <div class="another-bg9-container"></div>
+                    <div class="another-bg10-container"></div>
+                </form>
+                <form id='accessories' class='input-group-accessories'>
+                    <div class="bg12-container">
+                        <img src="scap.png" alt="cap slime" onclick="changePreview('sgreenwcap.png')">
+                    </div>
+                    <div class="bg13-container">
+                        <img src="scrown.png" alt="crown slime" onclick="changePreview('spinkwcrown.png')">
+                    </div>
+                    <div class="bg14-container">
+                        <img src="sshade.png" alt="shade slime" onclick="changePreview('spurplewglasses.png')">
+                    </div>
+                    <div class="bg15-container"></div>
+                    <div class="another-bg12-container"></div>
+                    <div class="another-bg13-container"></div>
+                    <div class="another-bg14-container"></div>
+                    <div class="another-bg15-container"></div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        var w = document.getElementById('character');
+        var x = document.getElementById('background');
+        var y = document.getElementById('accessories');
+        var z = document.getElementById('btn');
+
+        var characterContainers = document.querySelectorAll('.input-group-character > div');
+        var accessoryImages = document.querySelectorAll('.input-group-accessories img');
+        var previewImage = document.querySelector('.preview_box img');
+
+        characterContainers.forEach(function(container) {
+            container.addEventListener('click', function(event) {
+                var imageSource = event.currentTarget.querySelector('img').src;
+                var color = event.currentTarget.querySelector('img').alt.toLowerCase();
+                changePreview(imageSource, color);
+            });
+        });
+
+        accessoryImages.forEach(function(accessory) {
+            accessory.addEventListener('click', function(event) {
+                var clickedAccessoryAlt = event.currentTarget.alt.toLowerCase();
+                updateAccessoryPreview(clickedAccessoryAlt);
+            });
+        });
+
+        function changePreview(imageSource, color) {
+            previewImage.src = imageSource;
+        }
+
+        function updateAccessoryPreview(clickedAccessoryAlt) {
+            if (clickedAccessoryAlt.includes('sgreen') && clickedAccessoryAlt.includes('wcap')) {
+                previewImage.src = 'sgreenwcap.png';
+            } else if (clickedAccessoryAlt.includes('spurple') && clickedAccessoryAlt.includes('wglasses')) {
+                previewImage.src = 'spurplewglasses.png';
+            } else if (clickedAccessoryAlt.includes('spink') && clickedAccessoryAlt.includes('wcrown')) {
+                previewImage.src = 'spinkwcrown.png';
+            }
+            
+            
+        }
+
+        function character() {
+    w.style.transform = 'translateX(0%)';
+    x.style.transform = 'translateX(-50%)';
+    y.style.transform = 'translateX(-100%)';
+    z.style.left = '0px';
+
+   
+    var characterContainers = document.querySelectorAll('.input-group-character > div');
+    characterContainers.forEach(function(container) {
+        container.style.display = 'block';
+    });
+
+ 
+    var bgContainers = document.querySelectorAll('.input-group-background > div');
+    var accessoriesContainers = document.querySelectorAll('.input-group-accessories > div');
+    bgContainers.forEach(function(container) {
+        container.style.display = 'none';
+    });
+    accessoriesContainers.forEach(function(container) {
+        container.style.display = 'none';
+    });
+        }
+
+        function background() {
+             x.style.transform = 'translateX(0%)';
+    w.style.transform = 'translateX(50%)';
+    y.style.transform = 'translateX(-100%)';
+    z.style.left = '200px';
+
+    var bgContainers = document.querySelectorAll('.input-group-background > div');
+    bgContainers.forEach(function(container) {
+        container.style.display = 'block';
+    });
+
+   
+    var characterContainers = document.querySelectorAll('.input-group-character > div');
+    var accessoriesContainers = document.querySelectorAll('.input-group-accessories > div');
+    characterContainers.forEach(function(container) {
+        container.style.display = 'none';
+    });
+    accessoriesContainers.forEach(function(container) {
+        container.style.display = 'none';
+    });
+        }
+
+        function accessories() {
+    y.style.transform = 'translateX(0%)';
+    w.style.transform = 'translateX(50%)';
+    x.style.transform = 'translateX(100%)';
+    z.style.left = '400px';
+
+   
+    var accessoriesContainers = document.querySelectorAll('.input-group-accessories > div');
+    accessoriesContainers.forEach(function(container) {
+        container.style.display = 'block';
+    });
+
+  
+    var characterContainers = document.querySelectorAll('.input-group-character > div');
+    var bgContainers = document.querySelectorAll('.input-group-background > div');
+    characterContainers.forEach(function(container) {
+        container.style.display = 'none';
+    });
+    bgContainers.forEach(function(container) {
+        container.style.display = 'none';
+    });
+        }
+    </script>
+</body>
+</html>
